@@ -1,20 +1,10 @@
-/*File is 0-putchar.c*/
-#include "main.h"
-/*main-print putchar followed by a new line*/
+#include <stdio.h>
+/* Just a printing a string*/
 
-int main(void)
+char main(void);
 {
-/*Output per line */
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-_putchar('\n');
+printf("_putchar"\n);
 }
 {
-return (0);
+return 0;
 }
