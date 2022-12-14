@@ -1,17 +1,7 @@
-/*
- * File: 0-putchar.c 
- *
-*/
-
+/*File: 0-putchar.c*/
 #include "main.h"
 
-/** 
- * main-print putchar followed by a new line
- * 
- *Return :always 0
-*/
-
-
+/*main-print putchar followed by a new line*/
 int main(void)
 /*Printing the characters one by one*/
 {
@@ -25,7 +15,5 @@ _putchar('a');
 _putchar('r');
 _putchar('\n');
 
-/*Return 0 always*/
-      
 return (0);
 }
