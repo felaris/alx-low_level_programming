@@ -1,39 +1,30 @@
 #include "main.h"
-#define ROT 13
 /**
-* rot13 -concatinate string
-*
-*@c: stores the input
-*Return: uppercase string
-*/
-char *rot13(char *c)
-{
-int e;
-	while((c=getchar())!=EOF)
-	{
-		if(c >='A' && c <='Z')
-		{
-			if((e = c + ROT) <= 'Z')
-				_putchar(e);
-			else
-			{
-				   e = c - ROT;
-				_putchar(e);
-			}
-		}
-		else if(c >='a' && c <='z')
-		{
-			if((e= c + ROT) <= 'z')
-				_putchar(e);
-			else
-			{
-				e = c - ROT;
-				_putchar(e);
-			}
-		}
-		else
-			_putchar(c);
-	}
+ * rot13 - A function that encodes a string into "rot13"
+ * (rotating letter by 13 places)
+ * @a: a pointer to a string.
+ *
+ * Return: a pointer to a string.
+ */
 
-return (c);
+char *rot13(char *a)
+{
+	int i;
+
+	i = 0;
+	while (a[i] != '\0')
+	{
+		if ((a[i] >= 'a' && a[i] <= 'm') ||
+				(a[i] >= 'A' && a[i] <= 'M'))
+		{
+			a[i] = a[i] + 13;
+		}
+		else if ((a[i] >= 'n' && a[i] <= 'z') ||
+				(a[i] >= 'N' && a[i] <= 'Z'))
+		{
+			a[i] = a[i] - 13;
+		}
+	i++;
+	}
+	return (a);
 }
